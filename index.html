@@ -43,8 +43,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .cap img{display:block;width:72%;max-width:100%;height:auto;margin:0 auto}
 .bub{position:absolute;font:800 .95rem/1.15 Poppins;text-transform:uppercase;text-align:left;padding:15px 20px;border-radius:26px;box-shadow:0 12px 24px -10px #000;animation:pop .7s cubic-bezier(.2,1.4,.4,1) both;pointer-events:none}
 .bub.w{background:#fff;color:var(--or);left:-22px;top:-28px;border-bottom-left-radius:4px;font-size:1.05rem}
-.bub.o{background:var(--or);color:#fff;right:-22px;bottom:-26px;border-bottom-right-radius:4px;max-width:70%;animation-delay:.35s}
-.bub small{display:block;margin-top:4px;font:600 .72rem Poppins;opacity:.95}
+.bub.o{background:var(--or);color:#fff;right:-22px;bottom:-26px;border-bottom-right-radius:4px;max-width:78%;animation-delay:.35s}
+.bub small{display:block;margin-top:5px;font:600 .72rem/1.35 Poppins;opacity:.95}
 @media(max-width:420px){.bub{padding:12px 15px}.bub.w{font-size:.9rem;left:-8px}.bub.o{right:-8px}}
 @keyframes pop{from{transform:scale(.4) translateY(20px);opacity:0}}
 .hint{margin:56px 0 0;font-size:.85rem;color:#ffe0c2;animation:blink 2.4s ease-in-out infinite}
@@ -274,17 +274,18 @@ document.documentElement.classList.add("js");
 const CONFIG = {
   acara: "Syukuran Rotasi XXXVI",
   sapaan: "Ayo Ramaikan!",
-  lagu: "img/lagu.mp3",                       
-  mulai: "2026-11-07T19:00:00+08:00",        
-  selesai: "2026-11-08T12:00:00+08:00",       
-  tanggalLabel: "7 – 8 November 2026",
+  lagu: "img/lagu.mp3",                       // lagu latar di folder img. Kosongkan ("") jika tidak mau musik
+  mulai: "2026-11-07T19:00:00+08:00",         // jam mulai (WITA), dipakai hitung mundur
+  selesai: "2026-11-08T12:00:00+08:00",       // dipakai tombol kalender
+  // tanggalLabel: "7 – 8 November 2026",
+  slogan: "Bersyukur atas Pertemuan, Bertumbuh dalam Kebersamaan.",   // teks kecil di bubble oranye pada frame foto
   jamLabel: "Jam mulai: 19.00 WITA",
   tempat: "Pondok Uya, Pantai Anging Mamiri",
-  alamat: "Lengkapi alamat di sini",
+  alamat: "Makassar",
   mapsUrl: "https://maps.app.goo.gl/aMn7JAhaB2vxVW7T6",
-  rsvpUrl: "https://forms.gle/qCAc492TmWSF66p88",                               
-  rsvpNamaEntry: "",                          
-  waNomor: "62882022723379",                  
+  rsvpUrl: "https://forms.gle/qCAc492TmWSF66p88",                                // link Google Form konfirmasi. Kosong = tombol membuka WhatsApp panitia
+  rsvpNamaEntry: "",                          // opsional: kode kolom nama di Google Form (contoh "entry.1234567890") agar nama tamu terisi otomatis
+  waNomor: "62882022723379",                  // awali 62, tanpa + atau 0
   bawa: "Uang cash Rp10.000 (keperluan parkir dan registrasi masuk) beserta kabar baik. Detail lain akan diinfokan panitia.",
   rundown: [
     {
@@ -311,8 +312,8 @@ if (nama) $("tamu").textContent = nama;
 
 document.title = "Undangan " + CONFIG.acara;
 $("bub1").textContent = CONFIG.sapaan;
-$("bub2a").textContent = CONFIG.tanggalLabel;
-$("bub2b").textContent = CONFIG.tempat;
+// $("bub2a").textContent = CONFIG.tanggalLabel;
+$("bub2b").textContent = CONFIG.slogan;
 $("tgl").textContent = CONFIG.tanggalLabel;
 $("jam").textContent = CONFIG.jamLabel;
 $("tempat").textContent = CONFIG.tempat;
