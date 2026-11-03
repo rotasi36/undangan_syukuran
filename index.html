@@ -273,11 +273,12 @@ document.documentElement.classList.add("js");
 /* ====== UBAH DATA ACARA DI SINI SAJA ====== */
 const CONFIG = {
   acara: "Syukuran Rotasi XXXVI",
+  eak: "Satu Frame, Satu Keluarga",
   sapaan: "Ayo Ramaikan!",
   lagu: "img/lagu.mp3",                       // lagu latar di folder img. Kosongkan ("") jika tidak mau musik
   mulai: "2026-11-07T19:00:00+08:00",         // jam mulai (WITA), dipakai hitung mundur
   selesai: "2026-11-08T12:00:00+08:00",       // dipakai tombol kalender
-  // tanggalLabel: "7 – 8 November 2026",
+  tanggalLabel: "7 – 8 November 2026",
   slogan: "Bersyukur atas Pertemuan, Bertumbuh dalam Kebersamaan.",   // teks kecil di bubble oranye pada frame foto
   jamLabel: "Jam mulai: 19.00 WITA",
   tempat: "Pondok Uya, Pantai Anging Mamiri",
@@ -312,7 +313,7 @@ if (nama) $("tamu").textContent = nama;
 
 document.title = "Undangan " + CONFIG.acara;
 $("bub1").textContent = CONFIG.sapaan;
-// $("bub2a").textContent = CONFIG.tanggalLabel;
+$("bub2a").textContent = CONFIG.eak;
 $("bub2b").textContent = CONFIG.slogan;
 $("tgl").textContent = CONFIG.tanggalLabel;
 $("jam").textContent = CONFIG.jamLabel;
